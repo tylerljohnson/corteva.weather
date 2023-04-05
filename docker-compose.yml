@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+    restart: always
+    ports:
+      - 80:80
+    environment:
+      - bulk_import_enabled=false
+      - bulk_import_dir=/wx_data
+    depends_on:
+      - mysqldb
+    volumes:
+      - ~/src/code-challenge-template/wx_data:/wx_data
+  mysqldb:
+    container_name: db
+    image: mysql:8.0
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=dbuser
+      - MYSQL_PASSWORD=dbpwd
+      - MYSQL_DATABASE=weather
+      - MYSQL_ROOT_PASSWORD=secret
+    volumes:
+      - dbvol:/var/lib/mysql
+
+volumes:
+  dbvol:
