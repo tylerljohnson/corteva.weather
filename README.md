@@ -37,6 +37,16 @@ Example api calls with all request params present:
 - [/api/weather?page=1&size=5&station=USC00336196&date=1999-12-31](http://localhost/api/weather?page=1&size=5&station=USC00336196&date=1999-12-31)
 - [/api/weather/stats?page=1&size=5&station=USC00336196&year=1999](http://localhost/api/weather/stats?page=1&size=5&station=USC00336196&year=1999)
 
+### Extra credit - Deployment
+
+- S3 for storage of import files.
+- SQS for event notifications: new import files, trigger summarization lamba when import of a station is complete, etc.
+- While I haven't used it, AWS Batch for ingestion.
+- IAM for S3 bucket access.
+- Cloudfront for api response caching, https etc.
+- RDS for relational storage.
+- EC2 for hosting the app container.
+
 ## Requirements
 
 You'll need two things:
