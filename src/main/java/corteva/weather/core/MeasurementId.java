@@ -5,6 +5,9 @@ import lombok.*;
 import java.io.*;
 import java.time.*;
 
+/**
+ * The natural key for a measurement.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

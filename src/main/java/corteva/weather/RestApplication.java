@@ -8,6 +8,11 @@ import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.context.annotation.*;
 
+/**
+ * Main entry point for the rest application.
+ * This also can trigger the data ingestion via
+ * the `bulk.import.enabled` property.
+ */
 @SpringBootApplication
 @OpenAPIDefinition(info = @Info(title = "Corteva Weather API", version = "1.0", description = "API for weather station data"))
 @Slf4j

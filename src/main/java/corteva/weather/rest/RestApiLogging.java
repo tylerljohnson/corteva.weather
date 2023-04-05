@@ -9,6 +9,9 @@ import org.springframework.stereotype.*;
 import java.io.*;
 import java.time.*;
 
+/**
+ * A Filter that logs rest response data,
+ */
 @Component
 @WebFilter("/api/*")
 @Slf4j

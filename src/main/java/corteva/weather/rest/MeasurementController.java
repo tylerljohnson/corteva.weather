@@ -15,6 +15,11 @@ import java.time.*;
 import java.time.format.*;
 import java.util.*;
 
+/**
+ * rest controller for Measurements.
+ * Validation and paging/filtering is handled
+ * here as well.
+ */
 @RestController
 @RequestMapping("api/weather")
 @Validated

@@ -5,6 +5,14 @@ import org.springframework.data.jpa.repository.*;
 import org.springframework.data.repository.*;
 import org.springframework.transaction.annotation.*;
 
+/**
+ * handles persistence & paging + sorting,
+ * just like it says on the tin.
+ * Also the summarization heavy-lifting is
+ * handled here using SQL.
+ * This has several MySQL specific functions
+ * so changing db's would need to address this.
+ */
 public interface StatsRepository extends PagingAndSortingRepository<Stats, StatsId>, ListCrudRepository<Stats, StatsId> {
 
     @Modifying

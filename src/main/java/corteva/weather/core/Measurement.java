@@ -8,6 +8,12 @@ import org.springframework.format.annotation.*;
 import java.io.*;
 import java.time.*;
 
+/**
+ * Model the ingested data.
+ * This doubles as the DTO since there is no artificial pk.
+ * temps are in tenths of a C.
+ * precip is in tenths of a mm.
+ */
 @Entity
 @Data
 @Table(name = "measurements")

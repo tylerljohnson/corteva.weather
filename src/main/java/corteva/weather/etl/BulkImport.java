@@ -18,6 +18,8 @@ import java.util.stream.*;
  * Will scan a directory  for txt files, processing each of them.
  * Duplicate items will not be imported.
  * Station & date must be unique.
+ * Summarization can be triggered here as well, which will re-compute
+ * all the stats bases on the current state.
  */
 @Service
 @Slf4j

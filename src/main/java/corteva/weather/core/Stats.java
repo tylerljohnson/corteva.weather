@@ -9,6 +9,12 @@ import org.springframework.format.annotation.*;
 import java.io.*;
 import java.time.*;
 
+/**
+ * Model for the summarized data.
+ * This doubles as the DTO since there is no artificial pk.
+ * temps are in C.
+ * precip is in cm.
+ */
 @Entity
 @Data
 @Table(name = "stats")

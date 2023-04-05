@@ -4,6 +4,9 @@ import lombok.extern.slf4j.*;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.*;
 
+/**
+ * Business logic goes here
+ */
 @Service
 @Slf4j
 public class StatsService {
